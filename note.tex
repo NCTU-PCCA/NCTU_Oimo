@@ -1,0 +1,28 @@
+\section{無權邊的生成樹個數 Kirchhoff's Theorem}
+1. 定義 $n\times m$矩陣 $E=(a_{i,j})$，$n$ 為點數， $m$ 為邊數，若 $i$ 點在 $j$ 邊上，$i$為小點 $a_{i,j}=1$， $i$為大點 $a_{i,j}=-1$，否則 $a_{i,j}=0$。\\
+(證明省略)
+\\
+4.令 $E(E^T)=Q$，他是一種有負號的 kirchhoff 的矩陣，取 $Q$ 的子矩陣即為 $F(F^T)$\\
+結論：做 $Q$ 取子矩陣算 det 即為所求。(除去第一行第一列 by mz)
+
+\section{monge}
+$i \leq i^{'} < j \leq j^{'}$ \\
+$m(i,j)+m(i^{'},j^{'}) \leq m(i^{'},j)+m(i,j^{'})$ \\
+$k(i,j-1)<=k(i,j)<=k(i+1,j)$
+
+\section{四心}
+$\frac{sa*A+sb*B+sc*C}{sa+sb+sc}$ \\
+外心 sin 2A : sin 2B : sin 2C \\
+內心 sin  A : sin  B : sin  C \\
+垂心 tan  A : tan  B : tan  C \\
+重心      1 :      1 :      1 
+
+\section{Runge-Kutta}
+$y_{n+1}=y_n+\frac{h}{6}(k_1+2k_2+2k_3+k_4)$\\
+$k_1=f(t_n,y_n)$\\
+$k_2=f(t_n+\frac{h}{2},y_n+\frac{h}{2}k_2)$\\
+$k_3=f(t_n+\frac{h}{2},y_n+\frac{h}{2}k_3)$\\
+$k_2=f(t_n+h,y_n+hk_3)$
+
+\section{Householder Matrix}
+$I-2\frac{vv^T}{v^Tv}$
