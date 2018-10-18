@@ -55,3 +55,7 @@ int max_flow(int s,int t){
               flow+=f;
     }
 }
+int main(){
+	for(int i=0;i<V;++i)
+		g[i].clear();
+}
