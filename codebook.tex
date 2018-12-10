@@ -1,59 +1,18 @@
-\documentclass[landscape, 8pt,twocolumn,oneside, a4paper]{article}
-\title {NCTU\_Jaguar Codebook}
-\usepackage{parskip}
-\usepackage{xeCJK} 
-\setCJKmainfont{Noto Sans CJK TC}
-\setmonofont{Courier New}
-\usepackage {listings}
-\usepackage {color}
-\usepackage[x11names]{xcolor}
-\usepackage [left=1.0cm, right=1.0cm, top=2.0cm, bottom=0.5cm]{geometry}
-\definecolor {mygreen}{rgb}{0,0.6,0}
-\definecolor {mygray}{rgb}{0.5,0.5,0.5}
-\definecolor {mymauve}{rgb}{0.58,0,0.82}
-\usepackage{fancyheadings}
-\rhead{\thepage}
-\chead{init? array size? \texttt{x, y}? overflow\texttt{int}? 1-based? OK, Submit!}
-\lhead{NCTU\_Jaguar}
-\pagestyle{fancy}
-\cfoot{}
-\setlength{\headsep}{5pt}
-\setlength{\textheight}{540pt}
 
-\lstset {
-    language=C++,                 % the language of the code
-    basicstyle=\footnotesize\ttfamily,          % the size of the fonts that are used for the code
-    numberstyle=\footnotesize,          % the size of the fonts that are used for the line-numbers
-    stepnumber=1,                 % the step between two line-numbers. If it's 1, each line  will be numbered
-    numbersep=5pt,                  % how far the line-numbers are from the code
-    backgroundcolor=\color{white},        % choose the background color. You must add \usepackage{color}
-    showspaces=false,               % show spaces adding particular underscores
-    showstringspaces=false,           % underline spaces within strings
-    showtabs=false,               % show tabs within strings adding particular underscores
-    frame=false,                    % adds a frame around the code
-    tabsize=2,                    % sets default tabsize to 2 spaces
-    captionpos=b,                 % sets the caption-position to bottom
-    breaklines=true,                % sets automatic line breaking
-    breakatwhitespace=false,            % sets if automatic breaks should only happen at whitespace
-    escapeinside={\%*}{*)},           % if you want to add a comment within your code
-    morekeywords={*},               % if you want to add more keywords to the set
-    keywordstyle=\bfseries\color{Blue1},
-    commentstyle=\itshape\color{Red4},
-    stringstyle=\itshape\color{Green4},
-}
+\input{header.tex}
 
-\begin {document}
-\thispagestyle{fancy}
-{ \Huge NCTU\_Jaguar}
-\tableofcontents
-
+\section{Basic}
+\subsection{Vimrc}
+\lstinputlisting [language=bash] {"code/Basic/vimrc.sh"}
 \section{DataStructure}
-\subsection{Ext Heap}
-\lstinputlisting [language=c++] {"code/DataStructure/ext_heap.cpp"}
 \subsection{KDTree}
 \lstinputlisting [language=c++] {"code/DataStructure/KDTree.cpp"}
 \subsection{Link Cut Tree}
 \lstinputlisting [language=c++] {"code/DataStructure/link_cut_tree.cpp"}
+\subsection{Pb Ds Heap}
+\lstinputlisting [language=c++] {"code/DataStructure/pb_ds heap.cpp"}
+\subsection{Pb Ds Rbtree}
+\lstinputlisting [language=c++] {"code/DataStructure/pb_ds rbtree.cpp"}
 \subsection{SparseTable}
 \lstinputlisting [language=c++] {"code/DataStructure/SparseTable.h"}
 \subsection{Treap}
@@ -87,6 +46,8 @@
 \lstinputlisting [language=c++] {"code/Graph/BCC_edge.cpp"}
 \subsection{Dijkstra}
 \lstinputlisting [language=python] {"code/Graph/Dijkstra.py"}
+\subsection{Directed MST}
+\lstinputlisting [language=c++] {"code/Graph/Directed_MST.cpp"}
 \subsection{LCA}
 \lstinputlisting [language=c++] {"code/Graph/LCA.cpp"}
 \subsection{MaximumClique}
@@ -113,12 +74,8 @@
 \lstinputlisting [language=c++] {"code/Math/ax+by=gcd.cpp"}
 \subsection{FFT}
 \lstinputlisting [language=c++] {"code/Math/FFT.cpp"}
-\subsection{FWHT}
-\lstinputlisting [language=c++] {"code/Math/FWHT.cpp"}
 \subsection{GaussElimination}
 \lstinputlisting [language=c++] {"code/Math/GaussElimination.cpp"}
-\subsection{Inverse}
-\lstinputlisting [language=c++] {"code/Math/inverse.cpp"}
 \subsection{Karatsuba}
 \lstinputlisting [language=c++] {"code/Math/Karatsuba.cpp"}
 \subsection{LinearPrime}
@@ -129,6 +86,8 @@
 \lstinputlisting [language=c++] {"code/Math/Mobius.cpp"}
 \subsection{PollardRho}
 \lstinputlisting [language=c++] {"code/Math/pollardRho.cpp"}
+\subsection{Simplex}
+\lstinputlisting [language=c++] {"code/Math/Simplex.cpp"}
 \subsection{Sprague-Grundy}
 \lstinputlisting [language=c++] {"code/Math/Sprague-Grundy.cpp"}
 \subsection{Theorem}
@@ -164,5 +123,6 @@
 \subsection{Z-value}
 \lstinputlisting [language=c++] {"code/String/Z-value.cpp"}
 
+\input{note.tex}
 \end{document}
 

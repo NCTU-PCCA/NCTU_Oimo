@@ -1,59 +1,11 @@
 ﻿#!/usr/bin/env python
 # -*- coding: UTF-8 -*-
-doc_class = '\documentclass[landscape, 8pt,twocolumn,oneside, a4paper]{article}'
-
-head = '''\\title {NCTU\\_Jaguar Codebook}
-\\usepackage{parskip}
-\\usepackage{xeCJK} 
-\\setCJKmainfont{Noto Sans CJK TC}
-\\setmonofont{Courier New}
-\\usepackage {listings}
-\\usepackage {color}
-\\usepackage[x11names]{xcolor}
-\\usepackage [left=1.0cm, right=1.0cm, top=2.0cm, bottom=0.5cm]{geometry}
-\\definecolor {mygreen}{rgb}{0,0.6,0}
-\\definecolor {mygray}{rgb}{0.5,0.5,0.5}
-\\definecolor {mymauve}{rgb}{0.58,0,0.82}
-\\usepackage{fancyheadings}
-\\rhead{\\thepage}
-\\chead{init? array size? \\texttt{x, y}? overflow\\texttt{int}? 1-based? OK, Submit!}
-\\lhead{NCTU\\_Jaguar}
-\\pagestyle{fancy}
-\\cfoot{}
-\\setlength{\\headsep}{5pt}
-\\setlength{\\textheight}{540pt}
-'''
-
-lstset = '''\\lstset {
-    language=C++,                 % the language of the code
-    basicstyle=\\footnotesize\\ttfamily,          % the size of the fonts that are used for the code
-    numberstyle=\\footnotesize,          % the size of the fonts that are used for the line-numbers
-    stepnumber=1,                 % the step between two line-numbers. If it's 1, each line  will be numbered
-    numbersep=5pt,                  % how far the line-numbers are from the code
-    backgroundcolor=\\color{white},        % choose the background color. You must add \\usepackage{color}
-    showspaces=false,               % show spaces adding particular underscores
-    showstringspaces=false,           % underline spaces within strings
-    showtabs=false,               % show tabs within strings adding particular underscores
-    frame=false,                    % adds a frame around the code
-    tabsize=2,                    % sets default tabsize to 2 spaces
-    captionpos=b,                 % sets the caption-position to bottom
-    breaklines=true,                % sets automatic line breaking
-    breakatwhitespace=false,            % sets if automatic breaks should only happen at whitespace
-    escapeinside={\\%*}{*)},           % if you want to add a comment within your code
-    morekeywords={*},               % if you want to add more keywords to the set
-    keywordstyle=\\bfseries\\color{Blue1},
-    commentstyle=\\itshape\\color{Red4},
-    stringstyle=\\itshape\\color{Green4},
-}
-'''
-
-doc_head = '''\\begin {document}
-\\thispagestyle{fancy}
-{ \\Huge NCTU\\_Jaguar}
-\\tableofcontents
+head = '''
+\\input{header.tex}
 '''
 
 tail = '''
+\\input{note.tex}
 \\end{document}
 '''
 
@@ -85,10 +37,7 @@ def capitalize(line):
 
 outname = 'codebook.tex'
 sys.stdout = open(outname, 'w')
-print(doc_class)
 print(head)
-print(lstset)
-print(doc_head)
 for root, dirs, files in os.walk('code'):
   if root.find('.svn') >= 0:
     continue
