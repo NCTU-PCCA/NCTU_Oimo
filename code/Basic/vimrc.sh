@@ -1,8 +1,17 @@
-set ts=4
-set sw=4
-set si
-set nu
 set mouse=a
-imap { {}<esc>i<cr><esc>v<o
-map <f9> :w<lf>:!g++ -O2 -std=c++14 -o %.out % && echo "----Test Start----" && ./%.out<lf>
-imap <f9> <esc><f9>
+set t_Co=256
+set cursorline
+syntax on
+syntax enable
+set number
+map <F9> : !g++ % -o %<.out <CR>
+map <F5> : !./%<.out < %<.in <CR>
+set bg=light
+set shiftwidth=2
+set tabstop=2
+set ai
+set nu
+set ruler
+set incsearch
+filetype indent on
+hi Comment ctermfg=darkcyan
