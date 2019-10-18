@@ -72,4 +72,12 @@ f(x,y) 的極值，等同 s(x,y,λ) = f(x,y) + λ g(x,y) 的極值。
 { ∂/∂x s(x,y,λ) = 0
 { ∂/∂y s(x,y,λ) = 0
 { ∂/∂λ s(x,y,λ) = 0
+-------------------------------------------------------
+Baby Step Giant Step
+Get a^x = b (mod n)
+x = im - j, m = ceil(sqrt(n))
+a^im = b*a^j(mod n)
+預處理 a^im, 1 <= i <= m， 存hash/map
+接著去試從 0 <= j <= m有沒有a^im = b*a^j，有的話答案是 im-j。
+可能需要特判 if b =1 then x= 0
 */
